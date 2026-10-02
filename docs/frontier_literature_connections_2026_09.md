@@ -1,10 +1,10 @@
 # 🧩 Awesome-Mixture-of-Experts: 2026-09 — 2026-10 最新 MoE 路由/专家剪枝/系统算子论文全景索引
 
-**Document ID:** `AWESOME-MOE-202609` | **Last Updated:** `2026-10-01` | **Target Path:** `docs/frontier_literature_connections_2026_09.md` | **Total Routed Papers:** `21`
+**Document ID:** `AWESOME-MOE-202609` | **Last Updated:** `2026-10-02` | **Target Path:** `docs/frontier_literature_connections_2026_09.md` | **Total Routed Papers:** `21`
 
 > [!IMPORTANT]
 > **🔗 跨仓库文献引用链闭环 (Cross-Repository Reference Chain Closure)**
-> 本文件由每日 AI 前沿论文精读流水线自动路由生成，专门为 **`Shwai-He/awesome-mixture-of-experts`** 提供 2026 年 9–10 月最新发表的稀疏 MoE 路由器架构（`L2R`, `MoE-nD`, `CARE`）、专家联盟与阶段解耦剪枝（`SHAPE`, `REAP`, `SlimWise`, `AIMER`, `EvoESAP`）、循环与具身 MoE（`LoopMoE`, `DriveMoE`, `HiMoE-VLA`, `MoE-FM`）以及 GPU 硬件分块算子与异步流水系统（`MoE-Tile`, `MoE-OS`, `PiKV`, `CoMoE-Spec`, `CascadeEP`）深度精读汇编。
+> 本文件由每日 AI 前沿论文精读流水线自动路由生成，专门为 **`Shwai-He/awesome-mixture-of-experts`** 提供 2026 年 9–10 月最新发表的稀疏 MoE 路由器架构（`L2R`, `MoE-nD`, `CARE`）、专家联盟与阶段解耦剪枝（`SHAPE`, `REAP`, `SlimWise`, `AIMER`, `EvoESAP`, `SlimQwen`, `MAESTRO`）、循环与具身 MoE（`LoopMoE`, `DriveMoE`, `HiMoE-VLA`, `MoE-FM`）以及 GPU 硬件分块算子与异步流水系统（`MoE-Tile`, `MoE-OS`, `PiKV`, `CoMoE-Spec`, `CascadeEP`）深度精读汇编。
 > 每一篇收录文献均包含：**核心痛点、底层数学公式、ASCII 架构图、关键实测指标**，以及**与 `awesome-mixture-of-experts` 仓库具体代码模块和我们已发表代表作（Our Works）的双向锚定**。
 
 ---
@@ -13,7 +13,7 @@
 
 | 收录日期 | 论文标题与 arXiv 链接 | 关键实测收益 / 核心结论 | 锚定本仓库代码模块与文档路径 (`Target Module`) | 原始精读归档 |
 | :---: | :--- | :--- | :--- | :---: |
-| `2026-10-02` | [**🧩 SlimQwen & MAESTRO**](https://arxiv.org/abs/2605.08738) (`arXiv:2605.08738`) | **预训练规模下后剪枝显著优于从头训练**：`SlimQwen` 证实，在完全相同的千亿级 Token 预训练算力预算下，对预训练完成的 `Qwen3-Next-80A3B` 实施渐进专家剪枝所得的 `23A2B` 模型，在 MM... | `README.md#moe-pruning-and-compression` (Shapley Value Coalition Expert Pruning) | [2026-10-02](https://github.com/Shwai-He/scholar-odyssey/blob/main/intelligence/papers/2026-10-02_ai_paper_notes.md) |
+| `2026-10-02` | [**🧩 SlimQwen & MAESTRO**](https://arxiv.org/abs/2605.08738) (`arXiv:2605.08738`) | **预训练规模下后剪枝显著优于从头训练**：`SlimQwen` 证实，在完全相同的千亿级 Token 预训练算力预算下，对预训练完成的 `Qwen3-Next-80A3B` 实施渐进专家剪枝所得的 `23A2B` 模型，在 MM... | `README.md#moe-pruning-and-compression` (Pretraining-Scale Partial-Preservation Expert Merging & MTP Distillation, Qwen3-Next-80A3B -> 23A2B) | [2026-10-02](https://github.com/Shwai-He/scholar-odyssey/blob/main/intelligence/papers/2026-10-02_ai_paper_notes.md) |
 | `2026-10-02` | [**🗄️ LookaheadKV & RAP**](https://arxiv.org/abs/2603.10899) (`arXiv:2603.10899`) | **驱逐开销与首字延迟（TTFT）大幅降低**：在各大长文本理解基准（LongBench、L-Eval）上，`LookaheadKV` 相比依赖草稿生成的代表性基线，将 KV 驱逐耗时降低高达 **`14.5×`**，同时在复杂长... | `README.md#moe-pruning-and-compression` (Shapley Value Coalition Expert Pruning) | [2026-10-02](https://github.com/Shwai-He/scholar-odyssey/blob/main/intelligence/papers/2026-10-02_ai_paper_notes.md) |
 | `2026-10-02` | [**🌊 Transition Flow Matching & Recursive Flow Matching**](https://arxiv.org/abs/2603.15689) (`arXiv:2603.15689`) | **科学仿真 20x 速度飞跃**：在复杂的跨尺度时空流体仿真（Navier-Stokes 与气候动力学预测）基准测试中，`RecFM` 在 1–4 步生成下，相比目前领先的扩散基线实现了高达... | `README.md#moe-pruning-and-compression` (Shapley Value Coalition Expert Pruning) | [2026-10-02](https://github.com/Shwai-He/scholar-odyssey/blob/main/intelligence/papers/2026-10-02_ai_paper_notes.md) |
 | `2026-10-01` | [**AIMER & EvoESAP**](https://arxiv.org/abs/2603.18492) (`arXiv:2603.18492`) | **`AIMER` 超越基于 C4 校准集的强基线且速度快几个数量级**：在涵盖 `7B` 至 `47B` 不同架构的 MoE 语言模型及 **16 个多样化基准**上，免校准的 `AIMER` 不仅全面超越现有免校准方法，更在跨... | `README.md#moe-pruning-and-compression` (Calibration-Free Weight-Space Expert Pruning, Merging & Routing) | [2026-10-01](https://github.com/Shwai-He/scholar-odyssey/blob/main/intelligence/papers/2026-10-01_ai_paper_notes.md) |
@@ -236,7 +236,7 @@ def compute_maestro_stationary_scores(expert_activations_seq, num_experts):
 ---
 
 > [!TIP]
-> **🎯 `awesome-mixture-of-experts` 仓库代码级落地点 (`Target Module`)**：`README.md#moe-pruning-and-compression` (Shapley Value Coalition Expert Pruning)  
+> **🎯 `awesome-mixture-of-experts` 仓库代码级落地点 (`Target Module`)**：`README.md#moe-pruning-and-compression` (Pretraining-Scale Partial-Preservation Expert Merging & MTP Distillation, Qwen3-Next-80A3B -> 23A2B)  
 > **📚 上游精读归档 (`Upstream Source`)**：`scholar-odyssey/intelligence/papers/2026-10-02_ai_paper_notes.md`
 
 
