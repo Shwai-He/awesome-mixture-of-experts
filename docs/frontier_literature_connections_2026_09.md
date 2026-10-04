@@ -1,5 +1,7 @@
 # 🧩 Awesome-Mixture-of-Experts: 2026-09 — 2026-10 最新 MoE 路由/专家剪枝/系统算子论文全景索引
 
+2026-10-03 新增独立笔记：[MoE Routers 跨语言对齐](papers/2610.01921.md)。此篇为路由表征研究，非专家剪枝或部署加速结论；作者结果尚未复现。后续独立笔记见[索引](papers/README.md)。
+
 **Document ID:** `AWESOME-MOE-202609` | **Last Updated:** `2026-10-02` | **Target Path:** `docs/frontier_literature_connections_2026_09.md` | **Total Routed Papers:** `21`
 
 > [!IMPORTANT]
